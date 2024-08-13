@@ -132,11 +132,10 @@ class UsersController extends Controller
      * 展示用户列表
      *
      * @return Factory|View|Application
-
      */
     public function index(): Factory|View|Application
     {
-        $users = User::paginate(10);
+        $users = User::all();
         return view('users.index', compact('users'));
     }
 
