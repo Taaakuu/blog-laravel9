@@ -135,7 +135,7 @@ class UsersController extends Controller
      */
     public function index(): Factory|View|Application
     {
-        $users = User::all();
+        $users = User::paginate(10);
         return view('users.index', compact('users'));
     }
 
