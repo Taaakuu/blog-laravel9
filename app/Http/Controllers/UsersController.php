@@ -139,5 +139,20 @@ class UsersController extends Controller
         return view('users.index', compact('users'));
     }
 
+    /**
+     * 删除用户
+     *
+     * @param User $user
+     * @return RedirectResponse
+     * @throws AuthorizationException
+     */
 
+    public function destroy(User $user): RedirectResponse
+    {
+        $this->authorize('destroy', $user);
+        $user->delete();
+        session()->flash('success', '成功删除用户！');
+        // back() 方法会将用户重定向到之前的页面上
+        return back();
+    }
 }
