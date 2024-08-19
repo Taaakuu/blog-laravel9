@@ -128,6 +128,7 @@ class User extends Authenticatable
         $this->followings()->sync($user_ids, false);
     }
 
+
     /**
      * 取消关注
      *
