@@ -152,8 +152,8 @@ class User extends Authenticatable
      * @return bool
      */
 
-    public function isFollowing($user_ids): bool
+    public function isFollowing($user_id): bool
     {
-        return $this->followings->contains($user_ids);
+        return $this->followings->contains($user_id);
     }
 }
