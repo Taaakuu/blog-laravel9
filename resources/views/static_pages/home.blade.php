@@ -1,3 +1,4 @@
+@php use Illuminate\Support\Facades\Auth; @endphp
 @extends('layouts.default')
 
 @section('content')
@@ -14,6 +15,9 @@
             <aside class="col-md-4">
                 <section class="user_info">
                     @include('shared._user_info', ['user' => Auth::user()])
+                </section>
+                <section class="stats mt-2">
+                    @include('shared._stats', ['user' => Auth::user()])
                 </section>
             </aside>
         </div>
