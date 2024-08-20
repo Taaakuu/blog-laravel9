@@ -31,7 +31,7 @@ class FollowersController extends Controller
         $this->authorize('follow', $user);
 
         if (!Auth::user()->isFollowing($user->id)) {
-            Auth::user()->follow($user);
+            Auth::user()->follow($user->id);
         }
 
         return redirect()->route('users.show', $user->id);

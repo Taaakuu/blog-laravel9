@@ -148,7 +148,7 @@ class User extends Authenticatable
      *  contains 方法是 Collection 类的一个方法，用来判断一个集合是否包含某个元素
      *  成功返回 true，失败返回 false
      *
-     * @param $user_ids
+     * @param $user_id
      * @return bool
      */
 
